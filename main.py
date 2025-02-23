@@ -1,6 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/python3  
 import os  
-import sys  
 import tempfile  
 from core.call_flood import NuclearDialer  
 
