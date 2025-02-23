@@ -17,7 +17,7 @@
 ## INSTALLATION  
 ```bash  
 pkg install termux-api python  
-git clone https://github.com/veran666/VERAN-Overkill  
+git clone https://github.com/Veran350/VERAN-Overkill  
 cd VERAN-Overkill  
 bash lib/termux_payload.sh  # Grants rootless system access  
 python main.py  
