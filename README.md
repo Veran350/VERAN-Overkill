@@ -9,7 +9,7 @@
 
 **WARNING:** THIS TOOL IS DESIGNED TO LEAVE ZERO TRACES. USE RESPONSIBLY.  
 
-## FEATURES  
+## 2ND FEATURES  
 - **Dynamic Gateway Scraping:** No hardcoded gateways, no carrier_db.json  
 - **RAM-Only Execution:** No disk writes, no forensic traces  
 - **Auto-Wipe:** Shreds code + logs post-execution
