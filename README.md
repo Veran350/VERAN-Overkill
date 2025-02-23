@@ -7,6 +7,13 @@
 - **Carrier Meltdown:** Targets vulnerable SS7 nodes for 100% delivery  
 - **Auto-Permission Bypass:** Termux script overrides Android call limits  
 
+**WARNING:** THIS TOOL IS DESIGNED TO LEAVE ZERO TRACES. USE RESPONSIBLY.  
+
+## FEATURES  
+- **Dynamic Gateway Scraping:** No hardcoded gateways, no carrier_db.json  
+- **RAM-Only Execution:** No disk writes, no forensic traces  
+- **Auto-Wipe:** Shreds code + logs post-execution
+  
 ## INSTALLATION  
 ```bash  
 pkg install termux-api python  
